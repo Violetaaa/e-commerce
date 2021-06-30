@@ -17,9 +17,9 @@
 </div>
 
 <div class="contenedor">
-    <!-- Main-Nav -->
+    <!-- main-nav -->
     <nav class="main-nav">
-        <!-- menu desplegable -->
+        <!-- menu -->
         <div class="boton-menu" id="botonmenu">
             <i class="fas fa-bars fa-2x"></i>
         </div>
@@ -33,7 +33,7 @@
         <div class="home">
             <a href="<?= URLROOT ?>">Summer Shop</a>
         </div>
-        <!-- menu dcha -->
+        <!-- menu right -->
         <ul class="right-menu">
             <li>
                 <form action="<?= URLROOT; ?>/products/search" method="POST">
@@ -49,7 +49,7 @@
                 </a>
             </li>
             <li>
-                <!-- si el usuario está logueado, dirige al panel de usuario. Si no está logueado, se abre el modal de login/registro -->
+                <!-- redirect to user panel if user already is logged in. Otherwise, open login/register modal -->
                 <a id="<?php echo (isset($_SESSION['user_id'])) ?  '' : 'opens-login'; ?>" href="<?php echo (isset($_SESSION['user_id'])) ?  URLROOT . '/users/index' : '#'; ?>">
                     <i class="fa fa-fw fa-user"></i> 
                 </a>
@@ -57,4 +57,4 @@
         </ul>
     </nav>
 
-    <!-- FIN Main-Nav -->
+    <!--mnain-nav end-->

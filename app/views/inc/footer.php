@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="footer-inner">
            <ul>
-               <li><a href="#">&copy; Summer Shop 2020</a></li>
+               <li><a href="#">&copy; Summer Shop 2021</a></li>
            </ul>
         </div>
     </footer>

@@ -7,7 +7,6 @@ class Review{
         $this->db = new Database;
     }
 
-    //valoraciones de un usuario pasando su id
     public function getReviewsByUser($id){
         $this->db->query('SELECT *
         FROM review
@@ -24,7 +23,7 @@ class Review{
 
         return $results;
     }
-    //devuelve las valoraciones de cada producto pasando el identificador del producto
+
     public function getReviewsByProduct($id){
         $this->db->query('SELECT *
                             FROM review
@@ -42,7 +41,7 @@ class Review{
 
     public function addReview($data){
         $this->db->query('INSERT INTO review (title, text, product_id, user_id) VALUES (:title, :text, :product_id, :user_id)');
-        //Bind values
+        
         $this->db->bind(':title', $data['title']);
         $this->db->bind(':text', $data['text']);
         $this->db->bind(':product_id', $data['product_id']);
