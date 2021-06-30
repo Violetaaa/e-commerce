@@ -1,14 +1,14 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <h2 class="cart-title">Resumen de la compra</h2>
 <div class="cart">
-  <!-- carrito vacío -->
+  <!-- empty shopping cart -->
   <?php if ((!count($_SESSION['cart'])) > 0) { ?>
     <div class="empty-cart">
       <img src="<?= URLROOT; ?>/public/img/empty-cart.svg" alt="carrito vacío">
       <h4><?php echo 'No tienes ningún artículo en la cesta'; ?></h4>
       <a href="<?= URLROOT ?>">Continúa comprando <i class="fas fa-chevron-right"></i></a>
     </div>
-    <!-- carrito con productos -->
+    <!-- there are items in shopping cart -->
   <?php } else {
   ?>
     <div class="full-cart">
@@ -33,7 +33,7 @@
           </tr>
         <?php endforeach; ?>
       </table>
-      <!-- botones y total  -->
+      <!-- buttons and total  -->
       <div class="cart-options">
         <a href="<?= URLROOT ?>">Volver</a>
         <form class="empty" action="<?= URLROOT; ?>/carts/empty" method="post">
@@ -47,7 +47,7 @@
         </button>
       </form>
     </div>
-    <!-- cierre claúsula ELSE -->
+    <!-- else end -->
   <?php } ?>
 </div>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
